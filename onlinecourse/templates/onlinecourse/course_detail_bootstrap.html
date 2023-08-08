@@ -60,7 +60,7 @@
                         <div class="card mt-1">
                             <div class="card-header"><h5>{{ question.question_text }}</h5></div>
                             <!-- <HINT> Create a form to collect the selected choices for all questions -->
-                            <form id="questionform" action="{% url 'submit_choices' %}" method="post">
+                            <form id="questionform" action="{% url 'exam_results' %}" method="post">
                                 {% csrf_token %}
                                 <div class="form-group">
                                     <!-- <HINT> Each question will have many choices -->
@@ -79,7 +79,7 @@
                         </div>
                     {% endfor %}
                     <!-- <HINT> Create a form to collect the selected choices for all questions -->
-                    <form id="questionform" action="{% url 'submit_choices' %}" method="post">
+                    <form id="questionform" action="{% url 'exam_results' %}" method="post">
                         {% csrf_token %}
                         <input class="btn btn-success btn-block" type="submit" value="Submit">
                     </form>
